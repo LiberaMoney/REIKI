@@ -1149,7 +1149,40 @@
         align-items: flex-start;
       }
     }
-  </style>
+  /* 見出しの不自然な改行を調整 */
+.intro h2,
+.ensophic-callout h2,
+.reiki-explanation h3 {
+  word-break: keep-all;
+  overflow-wrap: normal;
+  text-wrap: balance;
+}
+
+@media (min-width: 781px) {
+  .intro h2 {
+    white-space: nowrap;
+    font-size: clamp(42px, 3.6vw, 58px);
+  }
+
+  .ensophic-callout h2 {
+    white-space: nowrap;
+    font-size: clamp(32px, 2.8vw, 44px);
+  }
+
+  .reiki-explanation h3 {
+    max-width: none;
+    white-space: nowrap;
+    font-size: clamp(32px, 2.6vw, 42px);
+  }
+}
+
+@media (max-width: 780px) {
+  .intro h2,
+  .ensophic-callout h2,
+  .reiki-explanation h3 {
+    white-space: normal;
+  }
+}</style>
 </head>
 
 <body>
