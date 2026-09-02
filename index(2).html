@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b87812">
+  <title>エンソフィックレイキ｜リンクテスト</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      display: grid;
+      place-items: center;
+      padding: 32px 20px;
+      color: #432c10;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      background:
+        radial-gradient(circle at 85% 12%, rgba(255, 217, 124, .7), transparent 30%),
+        radial-gradient(circle at 12% 88%, rgba(206, 142, 34, .2), transparent 30%),
+        linear-gradient(145deg, #fffdf8, #f8e6ba);
+    }
+    main {
+      width: min(100%, 620px);
+      padding: clamp(30px, 7vw, 58px);
+      border: 1px solid rgba(176, 113, 18, .42);
+      border-radius: 20px;
+      background: rgba(255, 253, 247, .9);
+      box-shadow: 0 24px 70px rgba(92, 52, 5, .15);
+      text-align: center;
+    }
+    .mark {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 26px;
+      border: 1px solid #b87812;
+      border-radius: 50%;
+      color: #8d5708;
+      font: italic 30px Georgia, serif;
+      box-shadow: 0 0 24px rgba(183, 123, 24, .2);
+    }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #9c6410;
+      font: 700 11px Georgia, serif;
+      letter-spacing: .22em;
+    }
+    h1 {
+      margin: 0;
+      font: 700 clamp(28px, 7vw, 43px)/1.45 "Yu Mincho", "Hiragino Mincho ProN", serif;
+      letter-spacing: .03em;
+    }
+    .lead { margin: 18px 0 32px; color: #725a3d; font-size: 15px; line-height: 1.9; }
+    nav { display: grid; gap: 14px; }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 64px;
+      padding: 18px 24px;
+      border: 1px solid #aa6e12;
+      border-radius: 999px;
+      color: #5d3b0b;
+      background: #fffdf8;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 22px rgba(98, 57, 6, .08);
+    }
+    a.primary {
+      border-color: #c28a28;
+      color: white;
+      background: linear-gradient(90deg, #98600e, #dda93f, #a4660e);
+    }
+    a:active { transform: translateY(1px); }
+    .note { margin: 26px 0 0; color: #8b7556; font-size: 12px; line-height: 1.8; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark">S</div>
+    <p class="eyebrow">LINK TEST</p>
+    <h1>予約リンク<br>動作確認ページ</h1>
+    <p class="lead">スマートフォンで、下の3つのボタンがそれぞれ開くか確認してください。</p>
+    <nav aria-label="予約と相談のリンク">
+      <a class="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdk61kUNaeQASUOqYu5giKVm-lVefkjSdquxApXOJB19NCVRQ/viewform">申込みフォーム <span>→</span></a>
+      <a href="https://line.me/ti/p/WqSczZozTn">LINEで相談 <span>→</span></a>
+      <a href="https://www.instagram.com/sachiko_kumagai/">Instagram DM <span>→</span></a>
+    </nav>
+    <p class="note">すべて現在の画面からリンク先へ移動します。戻る場合はブラウザの「戻る」をお使いください。</p>
+  </main>
+</body>
+</html>
