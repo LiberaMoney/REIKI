@@ -1,94 +1,1621 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#b87812">
-  <title>エンソフィックレイキ｜リンクテスト</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="仙台市泉区で受けられる、熊谷幸子のエンソフィックレイキ施術案内">
+  <meta name="theme-color" content="#b77b18">
+
+  <title>エンソフィックレイキ®｜熊谷幸子</title>
+
   <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; }
+    :root {
+      --ink: #3f2a13;
+      --brown: #57330a;
+      --gold: #b77b18;
+      --deep-gold: #8d5708;
+      --cream: #fffaf0;
+      --light-gold: #f6dfaa;
+      --line: rgba(157, 103, 18, .25);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      display: grid;
-      place-items: center;
-      padding: 32px 20px;
-      color: #432c10;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--ink);
+      background: var(--cream);
       font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
-      background:
-        radial-gradient(circle at 85% 12%, rgba(255, 217, 124, .7), transparent 30%),
-        radial-gradient(circle at 12% 88%, rgba(206, 142, 34, .2), transparent 30%),
-        linear-gradient(145deg, #fffdf8, #f8e6ba);
     }
-    main {
-      width: min(100%, 620px);
-      padding: clamp(30px, 7vw, 58px);
-      border: 1px solid rgba(176, 113, 18, .42);
-      border-radius: 20px;
-      background: rgba(255, 253, 247, .9);
-      box-shadow: 0 24px 70px rgba(92, 52, 5, .15);
-      text-align: center;
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
-    .mark {
-      display: grid;
-      place-items: center;
-      width: 58px;
-      height: 58px;
-      margin: 0 auto 26px;
-      border: 1px solid #b87812;
-      border-radius: 50%;
-      color: #8d5708;
-      font: italic 30px Georgia, serif;
-      box-shadow: 0 0 24px rgba(183, 123, 24, .2);
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
     }
-    .eyebrow {
-      margin: 0 0 14px;
-      color: #9c6410;
+
+    em {
+      color: #a56a0e;
+      font-style: normal;
+    }
+
+    .section-pad {
+      padding: 105px 8vw;
+    }
+
+    .eyebrow,
+    .section-label {
+      color: #a36a12;
       font: 700 11px Georgia, serif;
+      letter-spacing: .25em;
+    }
+
+    .section-label {
+      margin-bottom: 60px;
+    }
+
+    /* ヘッダー */
+
+    .site-header {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 5vw;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font: 700 11px Georgia, serif;
+      letter-spacing: .15em;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      font: italic 23px Georgia, serif;
+    }
+
+    .header-link {
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--gold);
+      font-weight: 700;
+    }
+
+    /* ファーストビュー */
+
+    .hero {
+      position: relative;
+      min-height: 790px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 82% 42%, rgba(255, 213, 104, .72), transparent 31%),
+        linear-gradient(135deg, #fffaf0 0%, #f7dfa7 62%, #d49322 100%);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 3;
+      width: 62%;
+      min-height: 790px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 140px 6vw 80px;
+    }
+
+    .hero-copy::before {
+      content: "ENSOPHIC REIKI®";
+      display: block;
+      width: fit-content;
+      margin-bottom: 28px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--gold);
+      color: #8a5710;
+      font: 700 11px Georgia, serif;
+      letter-spacing: .28em;
+    }
+
+    .hero .eyebrow {
+      display: none;
+    }
+
+    .hero h1 {
+      margin: 0;
+      color: #3f2a13;
+      font-size: clamp(42px, 5vw, 72px);
+      line-height: 1.3;
+      letter-spacing: .025em;
+    }
+
+    .hero-tagline {
+      width: fit-content;
+      margin: 22px 0 0;
+      padding: 13px 4px;
+      border-top: 1px solid rgba(164, 104, 13, .65);
+      border-bottom: 1px solid rgba(164, 104, 13, .65);
+      color: #68440f;
+      font: 500 clamp(19px, 2vw, 28px)/1.65 "Yu Mincho", serif;
+      letter-spacing: .05em;
+    }
+
+    .hero-tagline span {
+      margin-right: .45em;
+    }
+
+    .hero-tagline strong {
+      color: #9a610b;
+      white-space: nowrap;
+    }
+
+    .lead {
+      max-width: 620px;
+      margin: 27px 0 0;
+      color: #5c472d;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .source-line {
+      width: fit-content;
+      margin: 22px 0 0;
+      padding: 11px 18px;
+      border-left: 3px solid #a76a0d;
+      background: rgba(255, 250, 238, .72);
+      color: #67430f;
+      font: 600 16px/1.6 "Yu Mincho", serif;
+    }
+
+    .source-line span {
+      margin-right: .5em;
+      color: #9b610a;
+      font-weight: 800;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 27px;
+      color: #6f4a13;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-meta i {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .button {
+      display: inline-flex;
+      width: fit-content;
+      min-width: 230px;
+      min-height: 58px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 17px 23px;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .button.primary {
+      margin-top: 32px;
+      color: white;
+      background: linear-gradient(90deg, #9c6110, #dca83d, #9c6110);
+      box-shadow: 0 8px 25px rgba(108, 67, 10, .23);
+    }
+
+    .hero-visual {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      overflow: hidden;
+    }
+
+    .hero-visual img {
+      display: block;
+      width: 58%;
+      height: 100%;
+      margin-left: auto;
+      padding: 55px 1vw 0 0;
+      object-fit: contain;
+      object-position: right bottom;
+      filter: drop-shadow(0 22px 35px rgba(92, 50, 3, .2));
+    }
+
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 250, 240, .99) 0%,
+        rgba(253, 238, 204, .95) 37%,
+        rgba(255, 240, 204, .48) 53%,
+        transparent 72%
+      );
+    }
+
+    .image-caption {
+      position: absolute;
+      z-index: 2;
+      right: 35px;
+      bottom: 28px;
+      display: flex;
+      flex-direction: column;
+      padding: 11px 16px;
+      border: 1px solid rgba(183, 123, 24, .45);
+      border-radius: 999px;
+      color: #66400a;
+      background: rgba(255, 250, 240, .85);
+    }
+
+    .image-caption small {
+      font: 700 9px Georgia, serif;
       letter-spacing: .22em;
     }
-    h1 {
-      margin: 0;
-      font: 700 clamp(28px, 7vw, 43px)/1.45 "Yu Mincho", "Hiragino Mincho ProN", serif;
-      letter-spacing: .03em;
+
+    .image-caption span {
+      margin-top: 6px;
+      font: 600 12px "Yu Mincho", serif;
     }
-    .lead { margin: 18px 0 32px; color: #725a3d; font-size: 15px; line-height: 1.9; }
-    nav { display: grid; gap: 14px; }
-    a {
+
+    .hero-orbit {
+      position: absolute;
+      z-index: 2;
+      border: 1px solid rgba(183, 123, 24, .2);
+      border-radius: 50%;
+    }
+
+    .orbit-one {
+      width: 500px;
+      height: 500px;
+      top: 160px;
+      left: -260px;
+    }
+
+    .orbit-two {
+      width: 690px;
+      height: 690px;
+      top: 70px;
+      left: -350px;
+    }
+
+    /* ABOUT */
+
+    .intro {
+      position: relative;
+      background: #fffdf7;
+    }
+
+    .manifesto {
+      max-width: 1000px;
+      margin: -15px auto 85px;
+      padding: 28px 20px;
+      border-top: 1px solid #d2a348;
+      border-bottom: 1px solid #d2a348;
+      text-align: center;
+      color: #503411;
+      font: 700 clamp(24px, 3vw, 40px)/1.7 "Yu Mincho", serif;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 10vw;
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .intro h2,
+    .flow h2 {
+      margin: 0;
+      font-size: clamp(38px, 4vw, 60px);
+      line-height: 1.4;
+    }
+
+    .body-copy p {
+      margin: 0 0 24px;
+      font-size: 15px;
+      line-height: 2.15;
+    }
+
+    /* レイキとは */
+
+    .reiki-detail {
+      position: relative;
+      background: linear-gradient(180deg, #f6dfaa, #fffaf0 35%, #fffdf8);
+    }
+
+    .detail-heading {
+      max-width: 1000px;
+      margin: 0 auto 65px;
+      text-align: center;
+    }
+
+    .detail-heading > p {
+      color: #a16b17;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+
+    .detail-heading h2,
+    .ensophic-callout h2,
+    .reiki-note h2 {
+      color: #49300f;
+      font-size: clamp(32px, 4vw, 56px);
+      line-height: 1.5;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .detail-grid article {
+      padding: 38px 28px;
+      border: 1px solid rgba(182, 122, 25, .32);
+      background: rgba(255, 253, 247, .85);
+      text-align: center;
+      box-shadow: 0 14px 38px rgba(104, 66, 9, .07);
+    }
+
+    .detail-icon {
+      display: grid;
+      width: 68px;
+      height: 68px;
+      place-items: center;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      color: white;
+      background: radial-gradient(circle at 35% 30%, #f8df9a, #9a5b08 75%);
+      font: 700 22px "Yu Mincho", serif;
+    }
+
+    .detail-grid h3 {
+      color: #573810;
+      font-size: 21px;
+    }
+
+    .detail-grid p {
+      color: #665338;
+      font-size: 14px;
+      line-height: 1.95;
+    }
+
+    .reiki-explanation {
+      position: relative;
+      max-width: 960px;
+      margin: 72px auto 0;
+      padding: 55px 7%;
+      border: 1px solid rgba(184, 125, 29, .36);
+      background: rgba(255, 252, 243, .9);
+      box-shadow: 0 18px 48px rgba(104, 66, 9, .09);
+    }
+
+    .reiki-explanation h3 {
+      margin: 0 0 34px;
+      color: #49300f;
+      font-size: clamp(27px, 3vw, 40px);
+      line-height: 1.55;
+    }
+
+    .explanation-copy {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px;
+    }
+
+    .explanation-copy p {
+      margin: 0;
+      padding-top: 22px;
+      border-top: 1px solid rgba(191, 137, 47, .5);
+      color: #615038;
+      font-size: 14px;
+      line-height: 2.05;
+    }
+
+    .experience-note {
+      margin-top: 30px;
+      color: #856a42;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .mobile-break {
+      display: none;
+    }
+
+    .ensophic-callout {
+      max-width: 950px;
+      margin: 80px auto 0;
+      padding: 55px 7%;
+      border: 1px solid rgba(231, 195, 122, .7);
+      color: #fff7e5;
+      background:
+        radial-gradient(circle at 82% 20%, rgba(255, 225, 146, .18), transparent 30%),
+        linear-gradient(135deg, #503006, #8e570c 55%, #4a2b05);
+      text-align: center;
+      box-shadow: 0 22px 55px rgba(79, 45, 5, .2);
+    }
+
+    .ensophic-callout h2 {
+      color: #fff7e5;
+    }
+
+    .ensophic-callout > p:not(.eyebrow) {
+      max-width: 700px;
+      margin: 25px auto 0;
+      color: rgba(255, 247, 229, .84);
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .ensophic-callout strong {
+      display: block;
+      margin-top: 28px;
+      color: #f4cf7c;
+      font: 700 25px/1.7 "Yu Mincho", serif;
+    }
+
+    /* 施術の組み合わせ */
+
+    .custom {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.85), transparent 28%),
+        linear-gradient(135deg, #fffdf8, #f8e7c1 54%, #f3d99b);
+    }
+
+    .custom-head {
+      display: flex;
+      max-width: 1120px;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 40px;
+      margin: 0 auto 60px;
+    }
+
+    .custom h2,
+    .metabolism h2,
+    .reserve h2 {
+      margin: 0;
+      font-size: clamp(38px, 4.4vw, 66px);
+      line-height: 1.4;
+    }
+
+    .mini-copy {
+      margin: 0 0 16px;
+      color: #98610f;
+      font-size: 12px;
+      letter-spacing: .1em;
+    }
+
+    .custom-note {
+      min-width: 170px;
+      color: #6e522b;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .custom-note strong {
+      display: inline-block;
+      margin-top: 4px;
+      color: #9a630e;
+      font: 400 42px Georgia, serif;
+    }
+
+    .custom-note small {
+      display: block;
+      margin-top: 6px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .service-card {
+      position: relative;
+      margin-top: 58px;
+      padding: 88px 28px 38px;
+      border: 1px solid rgba(183, 123, 24, .36);
+      border-radius: 7px;
+      background: rgba(255, 253, 246, .84);
+      box-shadow: 0 15px 45px rgba(116, 76, 13, .09);
+    }
+
+    .service-art {
+      position: absolute;
+      z-index: 2;
+      top: -62px;
+      right: 18px;
+      width: 150px;
+      height: 150px;
+      border: 5px solid #fffaf0;
+      border-radius: 50%;
+      background-image: url("assets/reiki-three-ways.png");
+      background-repeat: no-repeat;
+      background-size: 300% auto;
+      box-shadow: 0 14px 32px rgba(100, 60, 7, .2);
+    }
+
+    .art-01 {
+      background-position: left center;
+    }
+
+    .art-02 {
+      background-position: center center;
+    }
+
+    .art-03 {
+      background-position: right center;
+    }
+
+    .service-number {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      color: white;
+      background: radial-gradient(circle, #f9e7b9, #a86b11);
+      font: 400 13px Georgia, serif;
+    }
+
+    .service-card h3 {
+      min-height: 2.8em;
+      color: #53350f;
+      font-size: 21px;
+    }
+
+    .service-card p {
+      color: #604e37;
+      font-size: 14px;
+      line-height: 1.95;
+    }
+
+    .service-card small {
+      display: block;
+      margin-top: 15px;
+      color: #966119;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.8;
+    }
+
+    .mix-message {
+      max-width: 1120px;
+      margin: 54px auto 0;
+      padding: 25px 30px;
+      border: 1px solid #c78d29;
+      background: rgba(255, 252, 243, .92);
+      text-align: center;
+    }
+
+    .mix-message span {
+      color: #98610f;
+      font-size: 11px;
+    }
+
+    .mix-message p {
+      margin: 10px 0;
+      font: 700 18px "Yu Mincho", serif;
+    }
+
+    .mix-message strong {
+      color: #80612f;
+      font-size: 12px;
+    }
+
+    /* 新陳代謝促進法 */
+
+    .metabolism {
+      position: relative;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 75% 45%, rgba(255,255,255,.55), transparent 24%),
+        linear-gradient(120deg, #f5dfaf, #fff9e8 55%, #edcc86);
+    }
+
+    .metabolism-copy {
+      position: relative;
+      z-index: 2;
+      width: min(690px, 72%);
+      margin-left: 14vw;
+    }
+
+    .metabolism-copy p:last-child {
+      max-width: 620px;
+      margin-top: 25px;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .metabolism-line {
+      position: absolute;
+      left: 8vw;
+      width: 1px;
+      height: 180px;
+      background: var(--gold);
+    }
+
+    .quote-mark {
+      position: absolute;
+      right: 11vw;
+      top: 100px;
+      color: rgba(181, 122, 0, .18);
+      font: 200px/1 Georgia, serif;
+    }
+
+    /* 施術の流れ */
+
+    .flow {
+      background: #fffdf8;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 10vw;
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .flow-intro {
+      max-width: 330px;
+      margin-top: 26px;
+      color: #745f64;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .flow ol {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--line);
+      list-style: none;
+    }
+
+    .flow li {
+      display: grid;
+      grid-template-columns: 55px 1fr;
+      gap: 25px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .flow li > span {
+      color: var(--gold);
+      font: italic 17px Georgia, serif;
+    }
+
+    .flow h3 {
+      margin: 0 0 7px;
+      font-size: 18px;
+    }
+
+    .flow li p {
+      margin: 0;
+      color: #745f64;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* 豆知識 */
+
+    .reiki-note {
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(183, 123, 24, .2);
+      border-bottom: 1px solid rgba(183, 123, 24, .2);
+      background: #fffaf0;
+    }
+
+    .note-number {
+      margin-bottom: 50px;
+      color: #a46b14;
+      font: 700 10px Georgia, serif;
+      letter-spacing: .28em;
+    }
+
+    .note-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 9vw;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .note-copy {
+      padding-left: 35px;
+      border-left: 1px solid #d4aa57;
+    }
+
+    .note-copy p {
+      margin: 0 0 22px;
+      color: #615038;
+      font-size: 14px;
+      line-height: 2.05;
+    }
+
+    .teaching-note {
+      padding: 16px 18px;
+      color: #79541b !important;
+      background: #f7e7c3;
+      font-size: 12px !important;
+    }
+
+    /* 料金 */
+
+    .price {
+      position: relative;
+      overflow: hidden;
+      color: #fff9e9;
+      background: radial-gradient(circle at 50% -20%, #b77c20, #6b3f08 46%, #3d2306);
+    }
+
+    .price-inner {
+      max-width: 820px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .price h2 {
+      margin-bottom: 38px;
+      font-size: clamp(32px, 4vw, 48px);
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: baseline;
+      gap: 35px;
+      padding: 28px 0;
+      border-top: 1px solid rgba(255,255,255,.35);
+      border-bottom: 1px solid rgba(255,255,255,.35);
+      text-align: left;
+    }
+
+    .price-row strong,
+    .price-row b {
+      font: 400 38px Georgia, serif;
+    }
+
+    .price-row small {
+      margin-left: 4px;
+      font: 500 11px sans-serif;
+    }
+
+    .price ul {
+      display: inline-block;
+      margin: 28px auto 0;
+      padding: 0;
+      color: rgba(255,255,255,.8);
+      text-align: left;
+      font-size: 14px;
+      line-height: 2;
+      list-style: none;
+    }
+
+    .price li::before {
+      content: "✓";
+      margin-right: 12px;
+      color: #f0c66c;
+    }
+
+    .location {
+      margin-top: 34px;
+      color: #f2cb78;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* 予約 */
+
+    .reserve {
+      text-align: center;
+      background: linear-gradient(135deg, #fffdf7, #f6e2b7);
+    }
+
+    .reserve > p:not(.eyebrow):not(.notice):not(.external-note) {
+      margin-top: 24px;
+      color: #745f64;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .reserve-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .reserve .button.primary,
+    .reserve .button.outline {
+      margin-top: 0;
+    }
+
+    .reserve .button.outline {
+      color: #65400b;
+      background: rgba(255,253,247,.8);
+    }
+
+    .inline-contact {
+      margin: 0 .15em;
+      color: #8f5908;
+      font-weight: 700;
+      border-bottom: 1px solid currentColor;
+    }
+
+    .external-note {
+      margin-top: 22px;
+      color: #8a6a3a;
+      font-size: 12px;
+    }
+
+    .notice {
+      max-width: 760px;
+      margin: 48px auto 0;
+      padding-top: 25px;
+      border-top: 1px solid var(--line);
+      color: #88777b;
+      font-size: 11px;
+      line-height: 1.9;
+      text-align: left;
+    }
+
+    footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 64px;
-      padding: 18px 24px;
-      border: 1px solid #aa6e12;
-      border-radius: 999px;
-      color: #5d3b0b;
-      background: #fffdf8;
-      font-size: 16px;
-      font-weight: 700;
-      text-decoration: none;
-      box-shadow: 0 8px 22px rgba(98, 57, 6, .08);
+      gap: 25px;
+      padding: 35px 5vw;
+      color: #f8dfaa;
+      background: #553108;
     }
-    a.primary {
-      border-color: #c28a28;
-      color: white;
-      background: linear-gradient(90deg, #98600e, #dda93f, #a4660e);
+
+    footer p {
+      margin: 0;
+      font-size: 12px;
     }
-    a:active { transform: translateY(1px); }
-    .note { margin: 26px 0 0; color: #8b7556; font-size: 12px; line-height: 1.8; }
+
+    /* スマホ */
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding: 18px 20px;
+      }
+
+      .brand {
+        font-size: 9px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .hero {
+        min-height: 720px;
+      }
+
+      .hero-copy {
+        width: 100%;
+        min-height: 720px;
+        justify-content: flex-start;
+        padding: 105px 24px 42px;
+      }
+
+      .hero-copy::before {
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .hero-tagline {
+        margin-top: 18px;
+        font-size: 18px;
+      }
+
+      .hero-tagline span,
+      .hero-tagline strong {
+        display: block;
+      }
+
+      .hero-tagline strong {
+        font-size: 20px;
+      }
+
+      .lead {
+        font-size: 14px;
+      }
+
+      .desktop {
+        display: none;
+      }
+
+      .source-line {
+        font-size: 14px;
+      }
+
+      .hero-meta {
+        gap: 10px;
+        font-size: 11px;
+      }
+
+      .hero-visual img {
+        position: absolute;
+        top: 12px;
+        right: -8%;
+        width: 88%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        opacity: .84;
+        object-fit: contain;
+      }
+
+      .hero-visual::after {
+        background: linear-gradient(
+          90deg,
+          rgba(255,250,240,.98),
+          rgba(255,250,240,.9) 42%,
+          rgba(255,250,240,.36) 70%,
+          rgba(255,250,240,.08)
+        );
+      }
+
+      .image-caption {
+        display: none;
+      }
+
+      .section-pad {
+        padding: 78px 24px;
+      }
+
+      .section-label {
+        margin-bottom: 42px;
+      }
+
+      .manifesto {
+        margin: -10px auto 60px;
+        font-size: 22px;
+      }
+
+      .intro-grid,
+      .flow-grid,
+      .note-grid,
+      .detail-grid,
+      .explanation-copy {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-grid {
+        gap: 20px;
+      }
+
+      .detail-heading h2,
+      .ensophic-callout h2,
+      .reiki-note h2 {
+        font-size: 30px;
+      }
+
+      .reiki-explanation {
+        margin-top: 50px;
+        padding: 42px 23px;
+      }
+
+      .reiki-explanation h3 {
+        font-size: 27px;
+      }
+
+      .mobile-break {
+        display: block;
+      }
+
+      .ensophic-callout {
+        margin-top: 55px;
+        padding: 45px 22px;
+      }
+
+      .custom-head {
+        display: block;
+      }
+
+      .custom-note {
+        margin-top: 30px;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .service-card {
+        margin-top: 55px;
+        padding: 78px 24px 32px;
+      }
+
+      .service-card h3 {
+        max-width: 64%;
+        min-height: 0;
+      }
+
+      .service-art {
+        top: -55px;
+        right: 18px;
+        width: 132px;
+        height: 132px;
+      }
+
+      .mix-message {
+        padding: 22px 15px;
+      }
+
+      .metabolism {
+        min-height: 570px;
+      }
+
+      .metabolism-copy {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .metabolism-line {
+        display: none;
+      }
+
+      .flow-grid {
+        gap: 42px;
+      }
+
+      .note-grid {
+        gap: 38px;
+      }
+
+      .note-copy {
+        padding: 30px 0 0;
+        border-top: 1px solid #d4aa57;
+        border-left: 0;
+      }
+
+      .price-row {
+        grid-template-columns: 1fr auto;
+        gap: 15px;
+      }
+
+      .price-row b {
+        grid-column: 1 / -1;
+        text-align: right;
+      }
+
+      .reserve-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+
+      .reserve .button {
+        width: 100%;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
+
 <body>
   <main>
-    <div class="mark">S</div>
-    <p class="eyebrow">LINK TEST</p>
-    <h1>予約リンク<br>動作確認ページ</h1>
-    <p class="lead">スマートフォンで、下の3つのボタンがそれぞれ開くか確認してください。</p>
-    <nav aria-label="予約と相談のリンク">
-      <a class="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdk61kUNaeQASUOqYu5giKVm-lVefkjSdquxApXOJB19NCVRQ/viewform">申込みフォーム <span>→</span></a>
-      <a href="https://line.me/ti/p/WqSczZozTn">LINEで相談 <span>→</span></a>
-      <a href="https://www.instagram.com/sachiko_kumagai/">Instagram DM <span>→</span></a>
-    </nav>
-    <p class="note">すべて現在の画面からリンク先へ移動します。戻る場合はブラウザの「戻る」をお使いください。</p>
+
+    <header class="site-header">
+      <a class="brand" href="#top">
+        <span class="brand-mark">S</span>
+        <span>HEALING BY SACHIKO</span>
+      </a>
+
+      <a class="header-link" href="#reserve">ご予約</a>
+    </header>
+
+    <section id="top" class="hero">
+      <div class="hero-orbit orbit-one"></div>
+      <div class="hero-orbit orbit-two"></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">ENSOPHIC REIKI®</p>
+
+        <h1>
+          軽やかに動ける<br>
+          私へ。
+        </h1>
+
+        <p class="hero-tagline">
+          <span>心と身体を、</span>
+          <strong>まるっと整える60分。</strong>
+        </p>
+
+        <p class="lead">
+          身体も、思考や行動のクセも。<br class="desktop">
+          その日の自分に合わせて自由に組み合わせるレイキセッションです。
+        </p>
+
+        <p class="source-line">
+          <span>根源のレイキ。</span>いわば、源泉かけ流し。
+        </p>
+
+        <div class="hero-meta">
+          <span>60分</span><i></i>
+          <span>7,000円</span><i></i>
+          <span>対面：仙台市泉区</span><i></i>
+          <span>遠隔：全国・場所不問</span>
+        </div>
+
+        <a class="button primary" href="#reserve">
+          施術を予約する <span>→</span>
+        </a>
+      </div>
+
+      <div class="hero-visual">
+        <img
+          src="assets/sachiko-reiki-emblem-v2.png"
+          alt="黄金の光を背景に、熊谷幸子がレイキを行う様子"
+        >
+
+        <div class="image-caption">
+          <small>HEALING BY SACHIKO</small>
+          <span>根源の光を、その手から。</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section-pad">
+      <p class="manifesto">
+        あなたの中に眠る本来の輝きを呼び覚まし、<br>
+        人生の流れを軽やかに、より豊かに。
+      </p>
+
+      <div class="section-label">01&nbsp;&nbsp;ABOUT</div>
+
+      <div class="intro-grid">
+        <h2>
+          エンソフィック<br>
+          レイキとは
+        </h2>
+
+        <div class="body-copy">
+          <p>
+            エンソフィックレイキは、モダンミステリースクールで
+            受け継がれているレイキの体系に基づくヒーリングです。
+            身体にやさしく手を当てながら、忙しさの中で後回しにしてきた
+            自分自身へ、静かに意識を戻していきます。
+          </p>
+
+          <p>
+            施術の受け取り方は人それぞれ。
+            温かさ、心地よさ、深い休息感など、
+            そのときの自分に必要な時間としてお過ごしください。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reiki-detail section-pad">
+      <div class="section-label">02&nbsp;&nbsp;WHAT IS REIKI?</div>
+
+      <div class="detail-heading">
+        <p>揉まない。叩かない。強く押さない。</p>
+
+        <h2>
+          レイキは、世界中で知られている<br>
+          手を使ったヒーリングです。
+        </h2>
+      </div>
+
+      <div class="detail-grid">
+        <article>
+          <span class="detail-icon">手</span>
+          <h3>そっと手を当てる</h3>
+          <p>
+            一般的なマッサージのように揉んだり叩いたりせず、
+            服を着たまま、身体の気になる箇所へやさしく手を当てます。
+          </p>
+        </article>
+
+        <article>
+          <span class="detail-icon">温</span>
+          <h3>受け取り方は人それぞれ</h3>
+          <p>
+            手の温かさ、深いリラックス感、身体が軽く感じる感覚、
+            こわばりがゆるむような感覚など、体感には個人差があります。
+          </p>
+        </article>
+
+        <article>
+          <span class="detail-icon">整</span>
+          <h3>自分を整える時間</h3>
+          <p>
+            忙しさの中で外側へ向き続けた意識を、自分自身へ戻す時間。
+            心身が本来持つバランスを取り戻していくことをサポートします。
+          </p>
+        </article>
+      </div>
+
+      <div class="reiki-explanation">
+        <p class="eyebrow">THE GENTLE WAY</p>
+
+        <h3>
+          揉まないのに、なぜ<br class="mobile-break">
+          軽く感じる人がいるの？
+        </h3>
+
+        <div class="explanation-copy">
+          <p>
+            レイキは、世界でも広く知られているヒーリングのひとつです。
+            世界中で行われている、揉んだり叩いたりせずに、
+            手を当てて心身を整えるヒーリングの源流のひとつともいわれています。
+          </p>
+
+          <p>
+            一般的なマッサージのように、筋肉を揉んだり、
+            強く押したりするものではありません。それでも、受けた方からは
+            「身体が軽く感じた」「こわばりがゆるんだように感じた」
+            といった声が聞かれることがあります。
+          </p>
+
+          <p>
+            レイキの考え方では、人間の身体には本来、
+            自らバランスを取り戻そうとする力が備わっているとされています。
+            その力が働きやすい穏やかな状態へ整えていくことをサポートします。
+          </p>
+        </div>
+
+        <p class="experience-note">
+          ※感じ方や体感には個人差があります。
+          医療行為ではなく、病気の診断・治療を目的とするものではありません。
+        </p>
+      </div>
+
+      <div class="ensophic-callout">
+        <p class="eyebrow">WHY ENSOPHIC?</p>
+
+        <h2>
+          では、エンソフィックレイキは<br>
+          何が違うのか。
+        </h2>
+
+        <p>
+          MMSの教えでは、エンソフィックレイキは、
+          臼井甕男氏が最初に受け取った体系に基づき、
+          すべてを生み出した根源「エンソフ」の純粋な光線を
+          扱うレイキとされています。
+        </p>
+
+        <strong>
+          根源からダイレクトに。<br>
+          その濃さは、ぜひ体感で。
+        </strong>
+      </div>
+    </section>
+
+    <section class="custom section-pad">
+      <div class="section-label">03&nbsp;&nbsp;YOUR SESSION</div>
+
+      <div class="custom-head">
+        <div>
+          <p class="mini-copy">決められた一律の60分ではありません</p>
+
+          <h2>
+            今のあなたに合わせて、<br>
+            <em>自由に組み合わせ。</em>
+          </h2>
+        </div>
+
+        <p class="custom-note">
+          1カ所・1テーマにつき<br>
+          <strong>10–15</strong><span> MIN.〜</span>
+          <small>目安。必要に応じてそれ以上</small>
+        </p>
+      </div>
+
+      <div class="service-list">
+        <article class="service-card">
+          <span class="service-art art-01"></span>
+          <span class="service-number">01</span>
+
+          <h3>身体への対面レイキ</h3>
+
+          <p>
+            服を着たままベッドに横になり、
+            気になる箇所へやさしく手を当てます。
+            揉んだり、強く押したりする施術ではありません。
+          </p>
+
+          <small>
+            足・腰・肩まわりなど、1カ所10〜15分以上が目安
+          </small>
+        </article>
+
+        <article class="service-card">
+          <span class="service-art art-02"></span>
+          <span class="service-number">02</span>
+
+          <h3>思考・行動のクセへの性癖療法</h3>
+
+          <p>
+            ここでいう「性癖」とは、性的な意味ではなく、
+            変えたいのに繰り返してしまう思考や行動のクセのこと。
+            テーマをひとつ選んで行います。
+          </p>
+
+          <small>
+            動きたいのに動けない／禁煙したい／間食を控えたい など
+          </small>
+        </article>
+
+        <article class="service-card">
+          <span class="service-art art-03"></span>
+          <span class="service-number">03</span>
+
+          <h3>遠隔療法</h3>
+
+          <p>
+            離れた場所にいる方へ行うレイキです。
+            対面で受けることが難しい方にも。
+            ご希望の場合は、予約時にご相談ください。
+          </p>
+
+          <small>
+            ご自宅など、落ち着いて過ごせる場所で受けられます
+          </small>
+        </article>
+      </div>
+
+      <div class="mix-message">
+        <span>たとえば</span>
+        <p>足まわり ＋ 肩まわり ＋「動きたいのに動けない」</p>
+        <strong>組み合わせは、ご相談しながら決められます。</strong>
+      </div>
+    </section>
+
+    <section class="metabolism section-pad">
+      <div class="metabolism-line"></div>
+
+      <div class="metabolism-copy">
+        <p class="eyebrow">THE FINAL TOUCH</p>
+
+        <h2>
+          仕上げは必ず、<br>
+          <em>すんごく気持ちいい。</em>
+        </h2>
+
+        <p>
+          すべてのセッションの仕上げに
+          「新陳代謝促進法」という手技を行います。
+          これが、すんごく気持ちいい。
+          言葉で説明するより、ぜひ体感してほしい時間です。
+        </p>
+      </div>
+
+      <div class="quote-mark">“</div>
+    </section>
+
+    <section class="flow section-pad">
+      <div class="section-label">04&nbsp;&nbsp;SESSION FLOW</div>
+
+      <div class="flow-grid">
+        <div>
+          <p class="mini-copy">はじめての方へ</p>
+          <h2>施術の流れ</h2>
+          <p class="flow-intro">
+            服を着たまま受けられます。
+            楽な服装でお越しください。
+          </p>
+        </div>
+
+        <ol>
+          <li>
+            <span>01</span>
+            <div>
+              <h3>お話を聞く</h3>
+              <p>今の状態や、身体・思考・行動で気になっていることを伺います。</p>
+            </div>
+          </li>
+
+          <li>
+            <span>02</span>
+            <div>
+              <h3>自由に組み合わせる</h3>
+              <p>1カ所・1テーマにつき10〜15分を目安に、その日の自分に合わせて施術します。</p>
+            </div>
+          </li>
+
+          <li>
+            <span>03</span>
+            <div>
+              <h3>新陳代謝促進法</h3>
+              <p>セッションの最後に必ず行う、心地よい手技です。</p>
+            </div>
+          </li>
+
+          <li>
+            <span>04</span>
+            <div>
+              <h3>施術後の確認</h3>
+              <p>感じたことを一緒に確認し、お水を飲んでゆっくりお戻りいただきます。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="reiki-note section-pad">
+      <div class="note-number">REIKI NOTE</div>
+
+      <div class="note-grid">
+        <div>
+          <p class="eyebrow">A LITTLE HISTORY</p>
+
+          <h2>
+            臼井甕男氏と<br>
+            エンソフィックレイキ
+          </h2>
+        </div>
+
+        <div class="note-copy">
+          <p>
+            臼井甕男（うすい みかお）氏は、
+            20世紀初頭の日本で靈氣療法を体系化し、
+            後世へ伝わる礎を築いた人物として知られています。
+          </p>
+
+          <p>
+            MMSで伝えられている系譜では、2016年5月、
+            サナトクマラが臼井氏へ伝授したフルモダリティの全体像が明らかになり、
+            従来のレイキに「エンソフの純粋な光線」と
+            ギャラクティック・アチューンメントが加わったと教えられています。
+          </p>
+
+          <p class="teaching-note">
+            ※上記は、モダンミステリースクールで
+            伝えられている教え・系譜に基づく説明です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="price section-pad">
+      <div class="price-inner">
+        <p class="eyebrow">MENU</p>
+        <h2>エンソフィックレイキ®</h2>
+
+        <div class="price-row">
+          <span>対面セッション</span>
+          <strong>60<small>分</small></strong>
+          <b>7,000<small>円</small></b>
+        </div>
+
+        <ul>
+          <li>身体への対面レイキ・性癖療法を自由に組み合わせ</li>
+          <li>新陳代謝促進法つき</li>
+          <li>遠隔療法をご希望の場合はご相談ください</li>
+        </ul>
+
+        <p class="location">
+          対面：宮城県仙台市泉区（詳細はご予約後）<br>
+          遠隔療法：全国・場所を問わず対応
+        </p>
+      </div>
+    </section>
+
+    <section id="reserve" class="reserve section-pad">
+      <p class="eyebrow">RESERVATION</p>
+
+      <h2>
+        いまの自分に、<br>
+        静かに手をかける60分。
+      </h2>
+
+      <p>
+        ご予約は申込みフォームから。事前のご相談は、
+        <a class="inline-contact" href="https://line.me/ti/p/WqSczZozTn">LINE</a>
+        または
+        <a class="inline-contact" href="https://www.instagram.com/sachiko_kumagai/">InstagramのDM</a>
+        からお気軽にどうぞ。
+      </p>
+
+      <div class="reserve-buttons">
+        <a
+          class="button primary"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdk61kUNaeQASUOqYu5giKVm-lVefkjSdquxApXOJB19NCVRQ/viewform"
+        >
+          申込みフォームへ <span>→</span>
+        </a>
+
+        <a
+          class="button outline"
+          href="https://line.me/ti/p/WqSczZozTn"
+        >
+          LINEで相談 <span>→</span>
+        </a>
+
+        <a
+          class="button outline"
+          href="https://www.instagram.com/sachiko_kumagai/"
+        >
+          Instagram DM <span>→</span>
+        </a>
+      </div>
+
+      <p class="external-note">
+        ボタンを押すと各ページへ移動します。
+        HPへ戻る場合は、ブラウザの「戻る」をお使いください。
+      </p>
+
+      <p class="notice">
+        ※本セッションは医療行為ではなく、
+        病気の診断・治療を目的とするものではありません。
+        通院中・服薬中の方は医師の指示を優先し、
+        治療を中断せずにご利用ください。
+        体感には個人差があります。
+      </p>
+    </section>
+
+    <footer>
+      <div class="brand">
+        <span class="brand-mark">S</span>
+        <span>HEALING BY SACHIKO</span>
+      </div>
+
+      <p>MMS公認ヒーラー　熊谷幸子</p>
+    </footer>
+
   </main>
 </body>
 </html>
