@@ -1149,40 +1149,79 @@
         align-items: flex-start;
       }
     }
-  /* 見出しの不自然な改行を調整 */
-.intro h2,
-.ensophic-callout h2,
-.reiki-explanation h3 {
-  word-break: keep-all;
-  overflow-wrap: normal;
-  text-wrap: balance;
-}
+    /* 見出しと横幅の最終調整：画面外へのはみ出しを防止 */
+    .intro-grid {
+      width: min(1120px, 100%);
+      grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+      gap: clamp(34px, 5vw, 76px);
+    }
 
-@media (min-width: 781px) {
-  .intro h2 {
-    white-space: nowrap;
-    font-size: clamp(42px, 3.6vw, 58px);
-  }
+    .intro-grid > *,
+    .body-copy,
+    .reiki-explanation,
+    .ensophic-callout {
+      min-width: 0;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
 
-  .ensophic-callout h2 {
-    white-space: nowrap;
-    font-size: clamp(32px, 2.8vw, 44px);
-  }
+    .intro h2 {
+      white-space: normal;
+      word-break: keep-all;
+      overflow-wrap: normal;
+      font-size: clamp(38px, 3.2vw, 52px);
+    }
 
-  .reiki-explanation h3 {
-    max-width: none;
-    white-space: nowrap;
-    font-size: clamp(32px, 2.6vw, 42px);
-  }
-}
+    .body-copy p {
+      word-break: auto-phrase;
+      text-wrap: pretty;
+      line-break: strict;
+    }
 
-@media (max-width: 780px) {
-  .intro h2,
-  .ensophic-callout h2,
-  .reiki-explanation h3 {
-    white-space: normal;
-  }
-}</style>
+    .ensophic-callout h2,
+    .reiki-explanation h3 {
+      max-width: 100%;
+      white-space: normal;
+      text-wrap: balance;
+      line-break: strict;
+    }
+
+    .ensophic-callout h2 {
+      font-size: clamp(30px, 2.6vw, 42px);
+    }
+
+    .reiki-explanation h3 {
+      font-size: clamp(30px, 2.45vw, 40px);
+    }
+
+    @media (max-width: 980px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .intro h2 {
+        font-size: clamp(36px, 6vw, 48px);
+      }
+    }
+
+    @media (max-width: 780px) {
+      .intro-grid {
+        gap: 32px;
+      }
+
+      .intro h2,
+      .ensophic-callout h2,
+      .reiki-explanation h3 {
+        max-width: 100%;
+        white-space: normal;
+      }
+
+      .intro h2 {
+        font-size: clamp(34px, 10vw, 42px);
+      }
+    }
+  </style>
 </head>
 
 <body>
